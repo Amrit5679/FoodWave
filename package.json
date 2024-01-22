@@ -1,7 +1,7 @@
 {
-  "name": "foodvilla",
+  "name": "foodwave",
   "version": "1.0.0",
-  "description": "A food delivery application",  
+  "description": "A food delivery application",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Amrit5679/FoodVilla.git"
+    "url": "git+https://github.com/Amrit5679/FoodWave.git"
   },
   "author": "Amrit Mishra",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Amrit5679/FoodVilla/issues"
+    "url": "https://github.com/Amrit5679/FoodWave/issues"
   },
-  "homepage": "https://github.com/Amrit5679/FoodVilla#readme",
+  "homepage": "https://github.com/Amrit5679/FoodWave#readme",
   "devDependencies": {
     "@babel/core": "^7.22.9",
     "babel-plugin-transform-remove-console": "^6.9.4",
