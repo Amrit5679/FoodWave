@@ -32,7 +32,6 @@ const Login = () => {
               .map(() => Math.random().toString(36)[2])
               .join("");
         };
-
         setLocalStorage({
             ...getLocalStorage,
             "userName": name,
@@ -71,6 +70,7 @@ const Login = () => {
                             onBlur={handleBlur}
                             value={values.email}
                             placeholder="Enter your email"
+                            id="email"
                         />
                         <p className="error">
                             {errors.email && touched.email && errors.email}

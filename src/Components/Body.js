@@ -41,7 +41,6 @@ const Body = () => {
       setFilteredRestaurants(restaurants);
     }
   };
-
   // if allRestaurants is empty don't render restaurants cards
   if (!allRestaurants) return null;
 
@@ -54,8 +53,11 @@ const Body = () => {
           placeholder="Search a restaurant you want..."
           value={searchText}
           // update the state variable searchText when we typing in input box
-          onChange={(e) => setSearchText(e.target.value)}
-        ></input>
+          onChange={(e) => {
+            setSearchText(e.target.value)
+            searchData(e.target.value,allRestaurants)
+          }}
+        />
         <button
           className="search-btn"
           onClick={() => {

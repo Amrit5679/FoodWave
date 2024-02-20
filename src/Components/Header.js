@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import useAuth from "../Hooks/useAuth";
 import useLocalStorage from "../Hooks/useLocalStorage";
-// Title component for display logo
+// Title component to display logo
 const Title = () => (
   <a href="/">
     <img
@@ -35,11 +35,11 @@ const Header = () => {
   const navigate= useNavigate();
   const cartItems= useSelector(store => store.cart.items);
   const isOnline = useOnline();
+  const xyz= getLocalStorage?.userName;
   return (
     <div className="header">
       <Title />
-      {isLoggedin && <div className="user-name">Hii {getLocalStorage?.username}!</div>}
-      {getLocalStorage?.username}
+      {isLoggedin && getLocalStorage?.userName && <div className="user-name">Hii {xyz}!</div>}
       <div className="nav-items">
         <ul>
           <li>
@@ -71,7 +71,10 @@ const Header = () => {
                 Logout<span className={isOnline ? "login-btn-green" : "login-btn-red"}>●</span>
               </button>
             ) : (
-              <button className="login-btn" onClick={() =>navigate("/Login")}>
+              <button className="login-btn" onClick={() =>{
+                  navigate("/Login")
+                }}
+              >
                 Login<span className={isOnline ? "login-btn-green" : "login-btn-red"}>●</span>
               </button>
             )}
@@ -83,3 +86,4 @@ const Header = () => {
 };
 
 export default Header;
+

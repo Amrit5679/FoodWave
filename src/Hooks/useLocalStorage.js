@@ -8,16 +8,17 @@ const useLocalStorage = (key) =>{
             localStorageValue = JSON.parse(resp);
         } catch (e) {null}
     }
-    const [getLocalStorage,setLocalStorageValue]=useState(localStorageValue);
-    //const [getLocalStorage, setLocalStorageValue] = useState(localStorageValue ? JSON.parse(localStorageValue) : null);
-    useEffect(()=>{
-        if(localStorageValue){
+    const [getLocalStorage,setLocalStorageValue]=useState(localStorageValue || null);
+    // const localStorageValue = localStorage.getItem(key);
+    // const [getLocalStorage, setLocalStorageValue] = useState(localStorageValue ? JSON.parse(localStorageValue) : null);
+
+    useEffect(() => {
+        if (localStorageValue) {
             setLocalStorageValue(localStorageValue);
+        } else {
+            setLocalStorageValue(null)
         }
-        else {
-            setLocalStorageValue(null);
-        }
-    },[localStorageValue])
+    },[])
 
     const setLocalStorage = (value) =>{
         localStorage.setItem(key,JSON.stringify(value));
