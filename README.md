@@ -2,6 +2,9 @@
 
 FoodWave is a React-based high performance and responsive food ordering web application,leveraging Swiggy’s live API to deliver real-time 
 data to users. 
+The server for this web application is deployed at https://food-wave-server-snowy.vercel.app. 
+The Github repository is 
+[FoodFire Server](https://github.com/Amrit5679/FoodWave-Server) .
 
 ## Getting Started
 
